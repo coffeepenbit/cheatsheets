@@ -12,3 +12,13 @@ elif [ 1 -eq 2 ]; then
 else
     echo "1 is not equal to 1"
 fi
+
+# switch-case
+case "$foobar" in
+    "foo")
+        echo "foobar is foo" ;;
+    "bar")
+        echo "foobar is bar" ;;
+    *)
+        echo "foobar is an unexpected value" ;;
+esac
