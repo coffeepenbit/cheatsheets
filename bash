@@ -44,3 +44,34 @@ echo "" | grep -c . # Result: 1
 # Count number of files in the current directory
 # This is done by counting the number of lines ls prints
 ls | wc -l
+
+# Echo total lines of all files in this directory
+find . -type f | wc -l | grep total
+
+# Echo number of files in each subdirectory in the current directory
+find . -type d -maxdepth 1 -exec sh -c "echo {}; find \"{}\" | wc -l" \;
+
+# Test files/directories
+# Test if directory
+[ -d $dirpath ]
+
+# Test if file exists and is a regular file (not a directory)
+[ -f $filepath ]
+
+# Test if file exists (whether it is a regular file or directory)
+[ -e $filepath ]
+
+# Test if file exists and size > 0 (not empty file)
+[ -s $filepath ]
+
+# Test if file is a symbolic link
+[ -L $filepath ]
+
+# Test if file is readable
+[ -r $filepath ]
+
+# Test if file is writable
+[ -w $filepath ]
+
+# Test if file is executable
+[ -x $filepath ]
