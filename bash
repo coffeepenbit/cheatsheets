@@ -90,4 +90,5 @@ find . -type d -maxdepth 1 -exec sh -c "echo {}; find \"{}\" | wc -l" \;
 ln -s "actual path" "symlink location"
 
 # Create hard link
+# Note: can only symlink regular files, not directories
 ln -s "actual path" "symlink location"
