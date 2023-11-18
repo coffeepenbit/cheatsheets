@@ -74,3 +74,10 @@ find . -type d -maxdepth 1 -exec sh -c "echo {}; find \"{}\" | wc -l" \;
 
 # Test if file is executable
 [ -x $filepath ]
+
+# Test if string is empty
+[ -z "string" ]
+
+# Test if string is not empty
+[ -n "string" ]
+[ "string" ] # is equivalent
