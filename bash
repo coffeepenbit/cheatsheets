@@ -105,3 +105,9 @@ ln -s "actual path" "symlink location"
 # Create hard link
 # Note: can only symlink regular files, not directories
 ln -s "actual path" "symlink location"
+
+# Get name of file
+filename=$(basename $filepath)
+
+# Use cut to split string on '.' and take the second element up to the end
+cut -d'.' -f2-
