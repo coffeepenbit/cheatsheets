@@ -39,7 +39,6 @@ tar -J ... -> tar -Ipixz ...
 # To append a new file to an old tar archive:
 tar -rf <archive.tar> <new-file-to-append>
 
- tldr:tar
 # tar
 # Archiving utility.
 # Often combined with a compression method, such as gzip or bzip2.
