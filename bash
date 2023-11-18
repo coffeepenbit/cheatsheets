@@ -51,7 +51,6 @@ find . -type f | wc -l | grep total
 # Echo number of files in each subdirectory in the current directory
 find . -type d -maxdepth 1 -exec sh -c "echo {}; find \"{}\" | wc -l" \;
 
-# Test files/directories
 # Test if directory
 [ -d $dirpath ]
 
