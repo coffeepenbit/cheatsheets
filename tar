@@ -1,0 +1,14 @@
+# create an archive and write it to a f]ile
+tar cf path/to/target.tar path/to/file1 path/to/file2 ...
+
+# create archive from list of files and write it to a file
+find <expression> | xargs tar -cvf archive.tar
+
+# create gzip archive
+tar cvzf archive.tar.gz file1 file2
+
+# extract archive to file
+tar xvf archive.tar
+
+# extract gzip archive
+tar xvzf archive.tar
