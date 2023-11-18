@@ -111,3 +111,23 @@ filename=$(basename $filepath)
 
 # Use cut to split string on '.' and take the second element up to the end
 cut -d'.' -f2-
+
+# Define variable as read only
+readonly varname="foo" # In top-level scope
+local -r varname="foo" # In function definition
+
+# Concatenate all function input arguments
+# Note: $* is like a string whereas $@ is like an array of strings
+function foobar {
+    echo "$*"
+}
+foobar this is a single string
+
+# Get all input arguments
+# Note: $@ is like a string whereas $* is like an array of strings
+function foobar {
+    for arg in "$@"; do
+        echo "\"$arg\""
+    done
+}
+foobar these are all separate strings
