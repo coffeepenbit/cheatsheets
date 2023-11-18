@@ -81,3 +81,13 @@ find . -type d -maxdepth 1 -exec sh -c "echo {}; find \"{}\" | wc -l" \;
 # Test if string is not empty
 [ -n "string" ]
 [ "string" ] # is equivalent
+
+# Test if string equality
+"string1" == "string2"
+"string1" != "string2"
+
+# Create symbolic link (symlink)
+ln -s "actual path" "symlink location"
+
+# Create hard link
+ln -s "actual path" "symlink location"
