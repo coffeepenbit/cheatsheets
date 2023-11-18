@@ -26,11 +26,24 @@ case "$foobar" in
     ;;
 esac
 
+# Redirect stdout to /dev/null
+echo "foobar" >/dev/null
+
+# Redirect stderr to /dev/null
+echo "foobar" 2>/dev/null
+
 # Redirect stderr to stdout
+# This takes stderr "2" and redirects ">" it to file descriptor "&" stdout "1"
+# Without "&" it would redirect to a file named "1"
 echo "foobar" 2>&1
 
 # Redirect stdout to stderr
+# This takes stderr "1" and redirects ">" it to file descriptor "&" stdout "2"
+# Without "&" it would redirect to a file named "2"
 echo "foobar" 1>&2
+
+# Redirect both stdout and stderr to devnull
+echo "foobar" &>/dev/null
 
 # Get the length of a string
 echo -n "foobar" | wc -c
